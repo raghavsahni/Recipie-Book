@@ -1,0 +1,90 @@
+<div class="body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="content">
+          <h1 class="color">Recipe Book</h1>
+          <h3>A Magical App To Increase Efficiency</h3>
+          <hr />
+          <!-- <button class="btn btn-info btn-lg" (click) ='onClick()'> Check out recipes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="py-5 px-3">
+  <br />
+  <h3 class="display-5 text-center pb-4 color">Why Recipe Book?</h3>
+  <br />
+  <div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 px-2 py-2 ">
+      <h3 class="text text-center">QUALITY</h3>
+      <p >
+        We strive for excellence in all that we do. We set high personal and
+        company standards, and then consistently try to exceed them.
+      </p>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 px-2 py-2">
+      <h3 class="text text-center">FLEXIBILITY</h3>
+      <p >
+        We believe that flexibility leads to excellence and we tailor all our
+        services to the specific needs of each client.
+      </p>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 px-2 py-2">
+      <h3 class="text text-center">INTEGRITY</h3>
+      <p >
+        When we face a tough decision we never compromise our values and
+        principles. We do what is right, not what's easy.
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <h2 class='text-center color'>DISCOVER OUR DELIGHTS</h2>
+    <hr />
+    <br>
+    <br>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <h3>All cuisine in one place</h3>
+    <p class = 'text-muted'>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molstias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <img src='../../assets/food.jfif' width="70%" height="60%">
+
+    </div>
+
+  </div>
+</div>
+<br>
+<br>
+<!-- Menu -->
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+      <h2 class='text-center color'>The Menu</h2>
+      <hr />
+      <table>
+        <tr class='bg'>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price(RS)</th>
+        </tr>
+        <tr  *ngFor="let m of menu">
+          <td>{{m.name}}</td>
+          <td>{{m.quantity}}</td>
+          <td>{{m.price}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+<app-footer></app-footer>
