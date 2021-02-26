@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -26,6 +27,8 @@ import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormComponent } from './form/form.component';
+import { MlPipePipe } from './shared/ml-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,8 @@ import { FooterComponent } from './footer/footer.component';
     FaqComponent,
     OurServicesComponent,
     FooterComponent,
+    FormComponent,
+    MlPipePipe,
     
   ],
   imports: [

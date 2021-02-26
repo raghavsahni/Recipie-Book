@@ -26,7 +26,6 @@ export class AuthService {
   signup(email: string, password: string) {
     return this.http
       .post<AuthResponseData>(
-        // 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?keyAIzaSyAM1hGy6Fo1RzYOt8ZepupSdrtWL64otsw',
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAEwhY7BFArmWqmgRtWJB0yqUm3eyL_ueA',
         {
           email: email,
@@ -113,12 +112,7 @@ export class AuthService {
     }, expirationDuration);
   }
 
-  private handleAuthentication(
-    email: string,
-    userId: string,
-    token: string,
-    expiresIn: number
-  ) {
+  private handleAuthentication( email: string,userId: string,token: string,expiresIn: number) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
     const user = new User(email, userId, token, expirationDate);
     this.user.next(user);

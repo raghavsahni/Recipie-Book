@@ -2,10 +2,13 @@ import {
   Component,
   OnInit,
   OnDestroy,
-  ViewChild
+  ViewChild,
+  Output
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
+// import { EventEmitter } from 'events';
 import { Subscription } from 'rxjs';
+import { EventEmitter } from "@angular/core";
 
 import { Ingredient } from '../../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
@@ -17,10 +20,12 @@ import { ShoppingListService } from '../shopping-list.service';
 })
 export class ShoppingEditComponent implements OnInit, OnDestroy {
   @ViewChild('f', { static: false }) slForm: NgForm;
+  // @Output() public updateEvent = new EventEmitter();
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;
   editedItem: Ingredient;
+  x:any;
 
   constructor(private slService: ShoppingListService) { }
 
@@ -58,9 +63,12 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
 
   onDelete() {
     this.slService.deleteIngredient(this.editedItemIndex);
+    
     this.onClear();
-  }
 
+    // this.x = this.slService.deleteIngredient(this.editedItemIndex);
+    // this.updateEvent.emit(this.x);
+  }
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

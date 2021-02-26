@@ -1,27 +1,45 @@
 <div class="container">
   <div class="row">
-    <app-shopping-edit></app-shopping-edit>
+    <!-- <app-shopping-edit (updateEvent)="delRecipie($event)"></app-shopping-edit> -->
+    <app-shopping-edit ></app-shopping-edit>
+
+
     <hr>
 
 
-    <div class="col-xs-12 col-lg-6 col-xl-6">
+    <div class="col-xs-12 col-lg-8 col-xl-8 ">
       <ul class="list-group">
         <a
           class="list-group-item"
           style="cursor: pointer"
           *ngFor="let ingredient of ingredients; let i = index"
           (click)="onEditItem(i)"
+           
         >
           {{ ingredient.name }} ({{ ingredient.amount }})
         </a>
       </ul>
     </div>
-
-    <div class="col-xs-12 col-lg-6 col-xl-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus est ea quidem corrupti sed deleniti animi, excepturi obcaecati dolores laudantium eius nobis vitae autem facere dolor consequuntur nisi, eaque veritatis.</p>
+    <!-- <div class="col-xs-12 col-lg-6 col-xl-6">
+      <div style="width:90%" style=" height:100% ">
+        <canvas id="pieChart" ></canvas>
+      </div>
+    </div> -->
+    <div class="conatiner">
+      <div class="row">
+        <div class="col-xs-12 col-lg-6 col-xl-6">
+          <div style="width:90%" style=" height:100% ">
+            <canvas id="doughnutChart" ></canvas>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-6 col-xl-6">
+          <div style="width:90%" style=" height:100% ">
+            <canvas id="pieChart" ></canvas>
+          </div>
+        </div>
+      </div>
     </div>
-      
-  </div>
+    <br>
 
- 
-</div>
+
+

@@ -1,0 +1,81 @@
+<div class="jumbotron">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 offset-md-3">
+                <h2 class='text-center color'>Sumbit Your Valuable Feedback</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>First Name<span class='text-danger'>*</span></label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required " class='text-danger'>First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name<span class='text-danger'>*</span></label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required" class='text-danger'>Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email<span class='text-danger'>*</span></label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required" class='text-danger'>Email is required</div>
+                            <div *ngIf="f.email.errors.email" class='text-danger'>Email must be a valid email address</div>
+                        </div>
+                    </div>
+                 
+                    <div class="form-group">
+                        <label>Contact<span class='text-danger'>*</span> </label>
+                        <input type="text" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                            <div *ngIf="f.phone.errors.required" class='text-danger'>Contact Number is required</div>
+                            <div *ngIf="f.phone.errors.pattern" class='text-danger'>Contact Number must be valid</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message </label>
+                        <textarea type="text" formControlName="message" class="form-control"  >
+                        </textarea>
+                       
+                    </div>
+                    <!-- <div formArrayName = 'address'>
+                        
+                        <button type='button' class='btn btn-info' (click)='onAddAddress()' >Add Address</button>
+                       <div class='form-group' *ngFor ="let a of registerForm.get('address').controls ; let i of index ">
+                           <input type='text' class='form-control mt' formControlName ={{i}}>
+                       </div>
+                    </div> -->
+
+                    <div class="form-group">
+                        <!-- <label>Address</label> -->
+                        <button type='button' class='btn btn-info' (click)='onAddAddress()' >Add Address</button>
+
+                        <!-- <input type="text" [class.is-invalid]="email.invalid && email.touched" formControlName="email" class="form-control">
+                        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small> -->
+                        <div formArrayName="address" *ngFor="let email of address.controls; let i=index">
+                          <input type="text" class="form-control mt" [formControlName]="i">
+                        </div>
+                      </div>
+
+
+
+                    <div class="form-group mt ">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                <div class="row mt-3"  *ngIf="showMsg">
+                    <div class="col-xs-12">
+                      <p class="alert alert-success">
+                          <strong>Your Data has been submitted Successfully!</strong><br>Our Team Will Get In Touch With You Shortly. 
+            
+                      </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

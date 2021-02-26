@@ -5,7 +5,6 @@
 }
 
 body {
-  /* font-family: 'Open Sans'; */
   font-size: 1.5em;
   background: #eee;
 }
@@ -18,8 +17,7 @@ body {
 }
 
 .centerplease {
-  /* margin: auto auto;
-  max-width: 270px; */
+  
   font-size: 40px; 
   color: rgb(41, 140, 179);
 }

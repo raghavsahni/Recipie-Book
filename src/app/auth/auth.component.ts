@@ -1,9 +1,4 @@
-import {
-  Component,
-  ComponentFactoryResolver,
-  ViewChild,
-  OnDestroy
-} from '@angular/core';
+import {Component,ComponentFactoryResolver,ViewChild,OnDestroy} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
@@ -82,15 +77,13 @@ export class AuthComponent implements OnDestroy {
   }
 
   private showErrorAlert(message: string) {
-    // const alertCmp = new AlertComponent();
-    const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(
-      AlertComponent
-    );
+    const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(AlertComponent);
+
     const hostViewContainerRef = this.alertHost.viewContainerRef;
     hostViewContainerRef.clear();
 
     const componentRef = hostViewContainerRef.createComponent(alertCmpFactory);
-
+  // console.log(componentRef);
     componentRef.instance.message = message;
     this.closeSub = componentRef.instance.close.subscribe(() => {
       this.closeSub.unsubscribe();

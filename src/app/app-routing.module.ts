@@ -14,7 +14,7 @@ import { FaqComponent } from './faq/faq.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  { path: '', redirectTo: '/auth', pathMatch: 'full' },
   { path: 'home', component:HomeComponent, pathMatch: 'full' },
   { path: 'faq', component:FaqComponent, pathMatch: 'full' },
   { path: 'ourServices', component:OurServicesComponent, pathMatch: 'full' },

@@ -1,14 +1,9 @@
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
- */
  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
 
  .fontDesign{
    font-family: 'Ubuntu', sans-serif;
  }
  
- /* color:#3d7a66b7; */
  
  .small{
      font-size:1.2rem;
@@ -26,16 +21,6 @@
      color: rgb(109, 191, 223);
     
  }
-   .cover {
-     
-     width: 100vw;
-     max-height: 100vh;
-     max-width: 100vw;
-     overflow: hidden;
-     
-     margin-bottom: 20px;
-   }
- 
    .space{
      overflow-x: hidden;
      text-align: center;
@@ -51,62 +36,10 @@
        font-size: 1.7rem;
        color:rgb(109, 191, 223);
    }
-   .texts {
-     width: 75%;
-     font-size: 0.8rem;
-     overflow:hidden;
-     
-   }
-   .text {
-     width: 70%;
-     font-size: 1rem;
-     overflow: hidden;
-     
-   }
-   
- 
-   #weddingImage {
-     padding: 0;
-     max-height: 90vh;    
- }
- 
- #imageContainer {
-     padding: 0;
-     position: relative;
- }
- 
- .centered {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   font-family: 'Montserrat', sans-serif;
-   font-size: .2 rem;
-   color: white;
-   letter-spacing: 1px;
-   font-weight: bold;
- }
- 
- img {
-     padding: 0;
-     width: 100%;
-     height: 100%;
- }
- 
- .imgDiv {
-     padding: 0;
-     height: 100%;
-     width: 100%;
-     align-items: center;
-     position: relative;
-     z-index: -9999;
- }
- 
- 
- /* cards */
+
  
  .shell{
-   padding:80px 0;
+   padding-top:80px;
  
  }
  .wsk-cp-product{
@@ -168,10 +101,7 @@
  }
  .wsk-cp-text .category > span{
    padding: 12px 30px;
-   /* border: 1px solid #3d7a66b7; */
    border: 1px solid #6fa794;
-   /* background-color: #e3ece9; */
-   /* background:#212121; */
    background:rgb(109, 191, 223);
    color:#fff;
    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -205,7 +135,6 @@
  }
  
  .wsk-cp-text .description-prod {
-     /* font-size:10px; */
    text-align:center;
    width: 100%;
    

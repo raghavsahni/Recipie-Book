@@ -14,9 +14,6 @@ export class MenuService {
 
   getData(): Observable<IMenu[]>{
     return this.http.get<IMenu[]>(this._url);
-                    // .catch(this.errorHandler);
   }
-  // errorHandler(error: HttpErrorResponse){
-  //   return Observable.throw(error.message || "Server Error");
-  // }
+  
 }

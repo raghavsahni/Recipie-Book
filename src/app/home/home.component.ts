@@ -16,9 +16,5 @@ public menu =[];
     .subscribe(data => this.menu = data);
   }
 
-  // onCLick(){
-  //   this.router.navigate(['/recipes'])
-  //   console.log('Clicked')
-
-  // }
+  
 }

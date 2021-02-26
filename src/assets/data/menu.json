@@ -1,7 +1,8 @@
 [
-    {"id": 1, "name": "Meal 1", "price": 30 , "quantity" :"100ml"},
-    {"id": 2, "name": "Meal 2", "price": 25 , "quantity" :"200ml"},
-    {"id": 3, "name": "Meal 3", "price": 26 , "quantity" :"300ml"},
-    {"id": 4, "name": "Meal 4", "price": 28 , "quantity" :"400ml"},
-    {"id": 5, "name": "Meal 5", "price": 25 , "quantity" :"200ml"}    
+    {"id": 1, "name": "Meal 1", "price": 30 , "quantity" :"100"},
+    {"id": 2, "name": "Meal 2", "price": 25 , "quantity" :"200"},
+    {"id": 3, "name": "Meal 3", "price": 40 , "quantity" :"300"},
+    {"id": 4, "name": "Meal 4", "price": 20 , "quantity" :"400"},
+    {"id": 5, "name": "Meal 5", "price": 25 , "quantity" :"200"}
+     
 ]

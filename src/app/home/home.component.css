@@ -9,6 +9,9 @@ color: rgb(136, 221, 221);
 .bg{
 	background-color: rgb(136, 221, 221);
 }
+.m{
+	margin-left: 10px;
+}
 
 .body {
 	background: url('../../assets/bg.jpg');
@@ -53,6 +56,3 @@ table {
 	padding: 8px;
   }
   
-  /* tr:nth-child(even) {
-	background-color: #dddddd;
-  } */

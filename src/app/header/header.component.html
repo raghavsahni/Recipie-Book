@@ -1,22 +1,20 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header"  *ngIf="isAuthenticated">
       <a routerLink="/home" class="navbar-brand"><img src='../../assets/logo.PNG' alt='Logo' height ='30px'></a>
       <!-- <a routerLink="/" class="navbar-brand">Home</a> -->
 
-    </div>
+    </div >
 
     <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" *ngIf="isAuthenticated">
         <li routerLinkActive="active">
           <a routerLink="/home">Home</a>
         </li>
         <li routerLinkActive="active" *ngIf="isAuthenticated">
           <a routerLink="/recipes">Recipes</a>
         </li>
-        <!-- <li routerLinkActive="active" *ngIf="!isAuthenticated">
-          <a routerLink="/auth">Authenticate</a>
-        </li> -->
+       
         <li routerLinkActive="active">
           <a routerLink="/shopping-list">Shopping List</a>
         </li>
@@ -24,7 +22,7 @@
           <a routerLink="/faq">FAQ</a>
         </li>
         <li routerLinkActive="active">
-          <a routerLink="/ourServices">Check This Out</a>
+          <a routerLink="/ourServices">Feedback</a>
         </li>
         
       </ul>
